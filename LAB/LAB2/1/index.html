@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Map</title>
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <script>
+      function updateStatus(department) {
+        window.status = department;
+      }
+    </script>
+  </head>
+  <body>
+    <img src="images/clg.jpeg" alt="MIT" usemap="#workmap" />
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="0,0,480,640"
+        href="cse.html"
+        alt="CSE DEPT"
+        onmouseover="updateStatus('CSE')"
+      />
+      <area
+        shape="rect"
+        coords="480,0,960,640"
+        href="IT.html"
+        alt="IT DEPT"
+        onmouseover="updateStatus('IT')"
+      />
+    </map>
+  </body>
+</html>

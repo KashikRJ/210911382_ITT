@@ -1,0 +1,77 @@
+1] see the code of how to calc avg
+2]see if i dont add not null than can i add selctive col value only --NOT POSSIBLE 
+
+IMPORTANT SQL QUERIES:
+-->
+
+delete from tbl_name
+where var1 between l_range and r_range
+
+update tble_name
+set var1=new_var1
+where var1 < ( select avg(var1) from tbl_name) 
+
+update tble_name
+set var1=case
+when var1<= then var1*1.05
+else var1*1.03
+end
+
+drop table table_name
+
+alter table tbl_name add A D
+
+alter table tbl_anme drop col A
+
+select deptname
+from department
+where building like ’%Watson%’;
+
+select *
+from instructor
+order by salary desc, name asc;
+
+(select course_id
+from section
+where semester = ’Fall’ and year= 2009)
+union/INTERSECT/MINUS
+(select course_id
+from section
+where semester = ’Spring’ and year= 2010);
+
+
+select avg (salary)
+from instructor
+where deptname= ’Comp. Sci.’;
+
+select count (distinct ID)
+from teaches
+where semester = ’Spring’ and year = 2010;
+
+select deptname, avg (salary) as avg salary
+from instructor
+group by deptname;
+
+select deptname, avg (salary) as avg salary
+from instructor
+group by deptname
+having avg (salary) >42000;
+
+
+select distinct course_id
+from section
+where semester = ’Fall’ and year= 2009 and
+course_id not in (select course_id from section
+where semester = ’Spring’ and year= 2010);
+
+select name
+from instructor
+where salary >some (select salary
+from instructor
+where deptname = ’Biology’);
+
+select deptname from instructor group by deptname
+having avg (salary) >= all (select avg (salary)
+from instructor
+group by deptname);
+

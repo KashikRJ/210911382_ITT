@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elective Selection Counter</title>
+    <style>
+        .highlight {
+            font-weight: bold;
+            font-size: 14px;
+            color: red; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <label for="numStudents">Enter Number of Students:</label>
+    <input type="number" id="numStudents" min="1">
+    <button onclick="initialize()">Start</button>
+</div>
+
+<div id="electiveForm" style="display:none;">
+    <select id="elective">
+        <option value="pe1">PE 1</option>
+        <option value="pe2">PE 2</option>
+        <option value="pe3">PE 3</option>
+        <option value="pe4">PE 4</option>
+        <option value="pe5">PE 5</option>
+    </select>
+    <button onclick="submitChoice()">Submit</button>
+</div>
+
+<div id="results"></div>
+
+<script>
+let totalStudents;
+let studentsCounted = 0;
+let electives = {
+    pe1: 0,
+    pe2: 0,
+    pe3: 0,
+    pe4: 0,
+    pe5: 0
+};
+
+function initialize() {
+    totalStudents = document.getElementById('numStudents').value;
+    document.getElementById('electiveForm').style.display = 'block';
+}
+
+function submitChoice() {
+    const selectedElective = document.getElementById('elective').value;
+    electives[selectedElective]++;
+    studentsCounted++;
+
+    if (studentsCounted >= totalStudents) {
+        displayResults();
+        document.getElementById('electiveForm').style.display = 'none';
+    }
+}
+
+function displayResults() {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Clear previous results
+
+    // Assuming we know the electives' keys in advance
+    const electiveKeys = ['pe1', 'pe2', 'pe3', 'pe4', 'pe5'];
+    let minCount = Number.MAX_SAFE_INTEGER;
+    let minElective = '';
+
+    // Finding the elective with minimum selection
+    for (let key of electiveKeys) {
+        if (electives[key] < minCount) {
+            minCount = electives[key];
+            minElective = key;
+        }
+    }
+
+    // Displaying all electives and highlighting the one with minimum selection
+    for (let key of electiveKeys) {
+        const electiveDiv = document.createElement('div');
+        electiveDiv.textContent = `${key.toUpperCase()}: ${electives[key]} students`;
+        if (key === minElective) {
+            electiveDiv.classList.add('highlight');
+        }
+        resultsDiv.appendChild(electiveDiv);
+    }
+}
+
+</script>
+
+</body>
+</html>

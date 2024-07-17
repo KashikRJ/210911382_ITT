@@ -1,0 +1,135 @@
+IMP THINGS TO NOTE:
+
+Label tag->for 
+Select tag->dropdown with option 
+input tag-> has date option 
+
+add script to bottom of body section
+
+2 ways to use js 1) use onclick with button to directly call fn
+                 2) use addEventListener
+
+new Date() to turn it into date format 
+
+.value returns in string format ,hence need to use parseINt or float
+
+alert()
+
+if-else uses brackets
+
+let mode=_____
+localstorage.setitem("mode",mode)
+window.location.href="page2.html"
+
+
+then
+
+let mode=localstoage.getitem("mode)
+
+
+document.addEventListener('DOMContentoaded',function(){
+
+
+var submitbtn= doc.getid
+submitbtn.addeventlistener('click',validate())
+
+
+
+});
+
+
+using innertext it can be displayed in div or p also
+
+in case of checkbox it is doc.getid.checked and in eventlistener it is change not input
+
+before adding event listener, chk if it exists
+
+
+<script src="index.html">
+and 
+<style> 
+ .class_name{
+font-weight:
+font-size:
+font-style:
+color:
+}
+OR
+make one div for each page ,set style="display:none;"
+
+
+set div2 displayto block in validate()
+
+
+radio groups should have same name
+
+
+is
+
+<a href="text/image.html">IMAGE</a>
+<a target="_top" href="mailto:kashikjhasg@gmail.com">Email@me</a>
+
+<label for="textarea">Additional Comments</label>
+
+<img src="images/clg.jpeg" alt="MIT" usemap="#workmap" />
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="0,0,480,640"
+        href="cse.html"
+        alt="CSE DEPT"
+        onmouseover="updateStatus('CSE')"
+      />
+      <area
+        shape="rect"
+        coords="480,0,960,640"
+        href="IT.html"
+        alt="IT DEPT"
+        onmouseover="updateStatus('IT')"
+      />
+
+
+// Data to be added
+const data = [
+    { name: "John Doe", email: "john@example.com" },
+    { name: "Jane Doe", email: "jane@example.com" }
+];
+
+// Select the table
+const table = document.getElementById("myTable");
+
+for (let i = 0; i < data.length; i++) {
+    const row = table.insertRow();
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+    cell1.textContent = data[i].name;
+    cell2.textContent = data[i].email;
+}
+
+
+
+
+zaid question??
+use of for loops 
+
+
+<!-- --> //comments
+
+<p>
+
+<h1> <h6>
+
+<br>
+
+<body style="background-color.lightgrey;">
+
+<center>
+
+<a href=""></a>
+
+<img src="" alt width height>
+
+<b> <i> <u>
+<sup><sub>
+
+

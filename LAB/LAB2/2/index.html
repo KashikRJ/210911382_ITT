@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Style for the container that holds the iframes */
+      .iframe-container {
+        display: flex; /* Enables Flexbox layout */
+        width: 100%; /* Container takes full width of the page */
+      }
+
+      iframe {
+        flex: 1; /* Each iframe takes equal width */
+        width: 50%; /* Explicitly setting the width to 50% */
+        height: 500px; /* Fixed height for each iframe */
+        border: none; /* Removes the border */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HOME PAGE</h1>
+    <div class="iframe-container">
+      <iframe src="friend.html" title="friend"></iframe>
+      <iframe src="temp.html" title="temp"></iframe>
+    </div>
+  </body>
+</html>

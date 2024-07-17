@@ -1,0 +1,36 @@
+body{ 
+    background-color:rgb(38, 203, 222);
+    color:rgb(234, 25, 25) ;
+    font-size:21px;
+
+}
+p{
+    color:#FFCC00;
+}
+h1{
+    font-size:70px;
+    color:pink;
+}
+div{
+    background:pink;
+    width: 500px;
+}
+span{
+    color: tomato;
+    font-size:40px;
+
+}
+.top-section{
+    background-color: pink;
+}
+.bottom-section{
+    background-color: plum;
+}
+.intro{
+    color: blue;
+}
+/* the box model*/
+.box{
+    background-color: pink;
+    width:300px;
+}
